@@ -1,0 +1,24 @@
+Package: ggeo
+Type: Package
+Title: Provide Helpers and Themes for ggplot
+Version: 0.1.0
+Author: Pascal Burkhard
+Maintainer: Pascal Burkhard <pascal.burkhard@gmail.com>
+Description: ggplot helpers and themes
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/Nenuial/geographer.git
+RoxygenNote: 7.0.0
+Imports: 
+    ggplot2,
+    magrittr,
+    rlang,
+    sysfonts,
+    paletteer,
+    utils,
+    prismatic,
+    colorspace,
+    grDevices
+Depends: 
+    R (>= 2.10)
