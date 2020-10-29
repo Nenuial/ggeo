@@ -135,6 +135,21 @@ ggeodata <- list(
       )
     ),
 
+    swiss_red = list(
+      light = list(
+        text = "#3a3e3f",
+        title = "#ff0000",
+        line = "#3a3e3f",
+        grid = "#3a3e3f"
+      ),
+      dark = list(
+        text = "#b2b3b3",
+        title = "#ff0000",
+        line = "#b2b3b3",
+        grid = "#b2b3b3"
+      )
+    ),
+
     oc_exam = list(
       light = list(
         text = "black",

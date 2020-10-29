@@ -28,7 +28,13 @@ ggeosave <- function(filename, ...,
          }
   )
 
-  ggplot2::ggsave(filename = glue::glue("out/{filename}.{extension}"),
+  if(stringr::str_detect(filename, "^/")) {
+    filepath <- filename
+  } else {
+    filepath <- glue::glue("out/{filename}.{extension}")
+  }
+
+  ggplot2::ggsave(filename = filepath,
                   width = width, height = height, dpi = dpi, units = units,
                   bg = "transparent", device = device,
                   ...)

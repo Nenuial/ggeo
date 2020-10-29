@@ -11,7 +11,7 @@
 #' @family themes nord_dark
 ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
                                 "pomological_green", "pomological_red",
-                                "nord_blue",
+                                "nord_blue", "swiss_red",
                                 "oc_exams"),
                       main = "main",
                       plot = "plot",
