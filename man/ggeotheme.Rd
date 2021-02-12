@@ -6,20 +6,25 @@
 \usage{
 ggeotheme(
   theme = c("ghibli_mononoke", "islamic_samarquand", "pomological_green",
-    "pomological_red", "nord_blue"),
+    "pomological_red", "nord_blue", "swiss_red", "doc", "oc_exams"),
+  main = "main",
+  plot = "plot",
   ...,
   mode = c("light", "dark"),
   base = ggplot2::theme_bw()
 )
 }
 \arguments{
-\item{theme}{Name of the theme to use}
+\item{theme}{Name of the theme to use. One of "ghibli_mononoke", "islamic_samarquand",
+"pomological_green", "pomological_red", "nord_blue", "swiss_red", "doc" or "oc_exams"}
 
-\item{mode}{One of light or dark}
+\item{main}{One of `main` or `main_exa`}
 
-\item{base}{Base ggplot2 theme to use}
+\item{plot}{One of `plot` or `plot_exa`}
 
-\item{horizontal}{\code{logical}. Horizontal axis lines?}
+\item{mode}{One of `light` or `dark`}
+
+\item{base}{A ggplot2 theme}
 }
 \value{
 An object of class \code{\link[ggplot2]{theme}()}.
@@ -27,4 +32,3 @@ An object of class \code{\link[ggplot2]{theme}()}.
 \description{
 ggeo theme
 }
-\concept{themes nord_dark}

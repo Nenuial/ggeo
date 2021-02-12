@@ -2,17 +2,18 @@
 #'
 #'
 #' @inheritParams ggplot2::theme_minimal
-#' @param horizontal \code{logical}. Horizontal axis lines?
-#' @param theme Name of the theme to use
-#' @param mode One of light or dark
-#' @param base Base ggplot2 theme to use
+#' @param theme Name of the theme to use. One of "ghibli_mononoke", "islamic_samarquand",
+#'   "pomological_green", "pomological_red", "nord_blue", "swiss_red", "doc" or "oc_exams"
+#' @param main One of `main` or `main_exa`
+#' @param plot One of `plot` or `plot_exa`
+#' @param mode One of `light` or `dark`
+#' @param base A ggplot2 theme
 #' @return An object of class \code{\link[ggplot2]{theme}()}.
 #' @export
-#' @family themes nord_dark
 ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
                                 "pomological_green", "pomological_red",
                                 "nord_blue", "swiss_red",
-                                "oc_exams"),
+                                "doc", "oc_exams"),
                       main = "main",
                       plot = "plot",
                       ...,
@@ -21,6 +22,8 @@ ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
 
   theme <- match.arg(theme)
   mode <- match.arg(mode)
+  main <- match.arg(main, choices = c("main", "main_exa", "main_latex"))
+  plot <- match.arg(plot, choices = c("plot", "plot_exa", "plot_latex"))
 
   theme <- (base +
               ggplot2::theme(rect =
@@ -57,7 +60,8 @@ ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
                              panel.border =
                                ggplot2::element_rect(color = ggeodata$themes[[theme]][[mode]]$line),
                              panel.grid =
-                               ggplot2::element_line(color = ggeodata$themes[[theme]][[mode]]$grid),
+                               ggplot2::element_blank(),
+                               #ggplot2::element_line(color = ggeodata$themes[[theme]][[mode]]$grid),
 
                              plot.background =
                                ggplot2::element_rect(fill = "transparent", color = NA),

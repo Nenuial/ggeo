@@ -1,5 +1,8 @@
 ggeodata <- list(
   themes = list(
+
+    # Theme main elements -----------------------------------------------------
+
     main = list(
       text = list(
         size = 24,
@@ -12,6 +15,35 @@ ggeodata <- list(
         family = "DINAlternate-Bold"
       )
     ),
+
+    main_exa = list(
+      text = list(
+        size = 11,
+        face = "plain",
+        family = "Helvetica"
+      ),
+      title = list(
+        size = 11,
+        face = "plain",
+        family = "Helvetica"
+      )
+    ),
+
+    main_latex = list(
+      text = list(
+        size = 11,
+        face = "plain",
+        family = "Fira Sans Light"
+      ),
+      title = list(
+        size = 11,
+        face = "plain",
+        family = "Fira Sans Light"
+      )
+    ),
+
+    # Theme plot elements -----------------------------------------------------
+
     plot = list(
       title = list(
         size = 72,
@@ -27,22 +59,13 @@ ggeodata <- list(
         size = 18,
         face = "italic",
         family = "Avenir Next"
+      ),
+      line = list(
+        size = .8
       )
     ),
 
-    main_oc = list(
-      text = list(
-        size = 11,
-        face = "plain",
-        family = "Helvetica"
-      ),
-      title = list(
-        size = 11,
-        face = "plain",
-        family = "Helvetica"
-      )
-    ),
-    plot_oc = list(
+    plot_exa = list(
       title = list(
         size = 14,
         face = "bold",
@@ -57,8 +80,34 @@ ggeodata <- list(
         size = 8,
         face = "italic",
         family = "Helvetica"
+      ),
+      line = list(
+        size = .8
       )
     ),
+
+    plot_latex = list(
+      title = list(
+        size = 11,
+        face = "plain",
+        family = "Fira Sans Regular"
+      ),
+      subtitle = list(
+        size = 11,
+        face = "plain",
+        family = "Fira Sans Light"
+      ),
+      caption = list(
+        size = 8,
+        face = "italic",
+        family = "Fira Sans Light"
+      ),
+      line = list(
+        size = .8
+      )
+    ),
+
+    # Theme color definitions -------------------------------------------------
 
     nord_blue = list(
       light = list(
@@ -147,6 +196,21 @@ ggeodata <- list(
         title = "#ff0000",
         line = "#b2b3b3",
         grid = "#b2b3b3"
+      )
+    ),
+
+    doc = list(
+      light = list(
+        text = "black",
+        title = "black",
+        line = "black",
+        grid = "#696969"
+      ),
+      dark = list(
+        text = "#white",
+        title = "white",
+        line = "white",
+        grid = "#696969"
       )
     ),
 
