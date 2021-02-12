@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils_fonts.R
 \name{ggeo_install_fonts}
 \alias{ggeo_install_fonts}
-\title{Install DIN fonts}
+\title{Install fonts}
 \usage{
 ggeo_install_fonts()
 }
@@ -10,5 +10,5 @@ ggeo_install_fonts()
 Installs the fonts using sysfonts
 }
 \description{
-Install DIN fonts
+Install fonts
 }
