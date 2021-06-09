@@ -1,5 +1,7 @@
 #' Save plots to out folder
 #'
+#' Deprecated !
+#'
 #' @inheritParams ggplot2::ggsave
 #' @param filename Name of the output file
 #' @param format Optional: one of "keynote"
@@ -38,4 +40,20 @@ ggeosave <- function(filename, ...,
                   width = width, height = height, dpi = dpi, units = units,
                   bg = "transparent", device = device,
                   ...)
+}
+
+ggeo_save <- function() {
+
+}
+
+ggeo_save_pdf <- function() {
+
+}
+
+ggeo_save_svg <- function() {
+
+}
+
+ggeo_save_png <- function() {
+
 }

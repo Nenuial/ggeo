@@ -4,8 +4,8 @@
 #' @inheritParams ggplot2::theme_minimal
 #' @param theme Name of the theme to use. One of "ghibli_mononoke", "islamic_samarquand",
 #'   "pomological_green", "pomological_red", "nord_blue", "swiss_red", "doc" or "oc_exams"
-#' @param main One of `main` or `main_exa`
-#' @param plot One of `plot` or `plot_exa`
+#' @param main One of `main`, `main_latex` or `main_exa`
+#' @param plot One of `plot`, `plot_latex` or `plot_exa`
 #' @param mode One of `light` or `dark`
 #' @param base A ggplot2 theme
 #' @return An object of class \code{\link[ggplot2]{theme}()}.
@@ -65,21 +65,27 @@ ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
 
                              plot.background =
                                ggplot2::element_rect(fill = "transparent", color = NA),
+                             plot.caption =
+                               ggplot2::element_text(family = ggeodata$themes[[plot]]$caption$family,
+                                                     size = ggeodata$themes[[plot]]$caption$size,
+                                                     face = ggeodata$themes[[plot]]$caption$face,
+                                                     color = ggeodata$themes[[theme]][[mode]]$text),
+                             plot.margin =
+                               ggeodata$themes[[plot]]$margin,
+
                              plot.title =
                                ggplot2::element_text(family = ggeodata$themes[[plot]]$title$family,
                                                      size = ggeodata$themes[[plot]]$title$size,
                                                      face = ggeodata$themes[[plot]]$title$face,
                                                      color = ggeodata$themes[[theme]][[mode]]$title),
+                             plot.title.position =
+                               "plot",
                              plot.subtitle =
                                ggplot2::element_text(family = ggeodata$themes[[plot]]$subtitle$family,
                                                      size = ggeodata$themes[[plot]]$subtitle$size,
                                                      face = ggeodata$themes[[plot]]$subtitle$face,
-                                                     color = ggeodata$themes[[theme]][[mode]]$title),
-                             plot.caption =
-                               ggplot2::element_text(family = ggeodata$themes[[plot]]$caption$family,
-                                                     size = ggeodata$themes[[plot]]$caption$size,
-                                                     face = ggeodata$themes[[plot]]$caption$face,
-                                                     color = ggeodata$themes[[theme]][[mode]]$text)
+                                                     color = ggeodata$themes[[theme]][[mode]]$title,
+                                                     margin = ggeodata$themes[[plot]]$subtitle_margin)
               ) +
               ggplot2::theme(...)
   )

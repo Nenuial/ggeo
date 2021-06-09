@@ -18,9 +18,9 @@ ggeotheme(
 \item{theme}{Name of the theme to use. One of "ghibli_mononoke", "islamic_samarquand",
 "pomological_green", "pomological_red", "nord_blue", "swiss_red", "doc" or "oc_exams"}
 
-\item{main}{One of `main` or `main_exa`}
+\item{main}{One of `main`, `main_latex` or `main_exa`}
 
-\item{plot}{One of `plot` or `plot_exa`}
+\item{plot}{One of `plot`, `plot_latex` or `plot_exa`}
 
 \item{mode}{One of `light` or `dark`}
 

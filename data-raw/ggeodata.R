@@ -55,6 +55,7 @@ ggeodata <- list(
         face = "bold",
         family = "DINAlternate-Bold"
       ),
+      subtitle_margin = ggplot2::margin(b = .5, unit = "cm"),
       caption = list(
         size = 18,
         face = "italic",
@@ -62,7 +63,8 @@ ggeodata <- list(
       ),
       line = list(
         size = .8
-      )
+      ),
+      margin = ggplot2::margin(l = .1, t = 1, b = .5, r = 1, unit = "cm")
     ),
 
     plot_exa = list(
@@ -76,6 +78,7 @@ ggeodata <- list(
         face = "plain",
         family = "Helvetica"
       ),
+      subtitle_margin = ggplot2::margin(b = .05, unit = "cm"),
       caption = list(
         size = 8,
         face = "italic",
@@ -83,20 +86,22 @@ ggeodata <- list(
       ),
       line = list(
         size = .8
-      )
+      ),
+      margin = ggplot2::margin(l = .1, t = .1, b = .1, r = .5, unit = "cm")
     ),
 
     plot_latex = list(
       title = list(
         size = 11,
         face = "plain",
-        family = "Fira Sans Regular"
+        family = "Fira Sans"
       ),
       subtitle = list(
         size = 11,
         face = "plain",
         family = "Fira Sans Light"
       ),
+      subtitle_margin = ggplot2::margin(b = .05, unit = "cm"),
       caption = list(
         size = 8,
         face = "italic",
@@ -104,7 +109,8 @@ ggeodata <- list(
       ),
       line = list(
         size = .8
-      )
+      ),
+      margin = ggplot2::margin(l = .1, t = .1, b = .1, r = .5, unit = "cm")
     ),
 
     # Theme color definitions -------------------------------------------------

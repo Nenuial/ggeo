@@ -21,6 +21,7 @@ Imports:
     prismatic,
     colorspace,
     grDevices,
-    scales
+    scales,
+    geotools
 Depends: 
     R (>= 3.1)

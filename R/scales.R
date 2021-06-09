@@ -18,16 +18,28 @@ ggeo_label_pyramid <- function(x) {
   ggeo_label_sci_10(abs(x))
 }
 
+#' Format population labels on pyramids
+#'
+#' DEPRECATED
+#'
+#' @param x The label
+#' @param ... For compatibility
+#'
+#' @return Absolute
+#' @export
+ggeoformat_pyramid_pop <- function(x, ...) {
+  scales::number(abs(x), scale = 1e-3)
+}
+
+
 
 #' Remove specific breaks
 #'
 #' @param original_func The break function
 #' @param remove_list The values to remove from the breaks
 #'
-#' @return
+#' @return A list
 #' @export
-#'
-#' @examples
 ggeo_remove_breaks <- function(original_func, remove_list = list()) {
   function(x) {
     original_result <- original_func(x)
