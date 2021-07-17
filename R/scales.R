@@ -18,6 +18,16 @@ ggeo_label_pyramid <- function(x) {
   ggeo_label_sci_10(abs(x))
 }
 
+#' Format labels for relative pyramids
+#'
+#' @param x Number to format
+#'
+#' @return A formatted expression
+#' @export
+ggeo_label_abs_percent <- function(x) {
+  scales::percent(abs(x), accuracy = 0.1)
+}
+
 #' Format population labels on pyramids
 #'
 #' DEPRECATED
