@@ -18,16 +18,16 @@ ggeotheme(
 \item{theme}{Name of the theme to use. One of "ghibli_mononoke", "islamic_samarquand",
 "pomological_green", "pomological_red", "nord_blue", "swiss_red", "doc" or "oc_exams"}
 
-\item{main}{One of `main`, `main_latex` or `main_exa`}
+\item{main}{One of \code{main}, \code{main_latex} or \code{main_exa}}
 
-\item{plot}{One of `plot`, `plot_latex` or `plot_exa`}
+\item{plot}{One of \code{plot}, \code{plot_latex} or \code{plot_exa}}
 
-\item{mode}{One of `light` or `dark`}
+\item{mode}{One of \code{light} or \code{dark}}
 
 \item{base}{A ggplot2 theme}
 }
 \value{
-An object of class \code{\link[ggplot2]{theme}()}.
+An object of class \code{\link[ggplot2:theme]{ggplot2::theme()}}.
 }
 \description{
 ggeo theme
