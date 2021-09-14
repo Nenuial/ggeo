@@ -205,6 +205,21 @@ ggeodata <- list(
       )
     ),
 
+    purple = list(
+      light = list(
+        text = "#303088",
+        title = "#a84890",
+        line = "#303088",
+        grid = "#303088"
+      ),
+      dark = list(
+        text = "#faeff1",
+        title = "#a84890",
+        line = "#faeff1",
+        grid = "#faeff1"
+      )
+    ),
+
     doc = list(
       light = list(
         text = "black",

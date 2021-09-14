@@ -3,7 +3,8 @@
 #'
 #' @inheritParams ggplot2::theme_minimal
 #' @param theme Name of the theme to use. One of "ghibli_mononoke", "islamic_samarquand",
-#'   "pomological_green", "pomological_red", "nord_blue", "swiss_red", "doc" or "oc_exams"
+#'   "pomological_green", "pomological_red", "nord_blue", "swiss_red",
+#'   "purple", "doc" or "oc_exams"
 #' @param main One of `main`, `main_latex` or `main_exa`
 #' @param plot One of `plot`, `plot_latex` or `plot_exa`
 #' @param mode One of `light` or `dark`
@@ -12,7 +13,7 @@
 #' @export
 ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
                                 "pomological_green", "pomological_red",
-                                "nord_blue", "swiss_red",
+                                "nord_blue", "swiss_red", "purple",
                                 "doc", "oc_exams"),
                       main = "main",
                       plot = "plot",
