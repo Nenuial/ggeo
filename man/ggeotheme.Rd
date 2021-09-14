@@ -6,7 +6,7 @@
 \usage{
 ggeotheme(
   theme = c("ghibli_mononoke", "islamic_samarquand", "pomological_green",
-    "pomological_red", "nord_blue", "swiss_red", "doc", "oc_exams"),
+    "pomological_red", "nord_blue", "swiss_red", "purple", "doc", "oc_exams"),
   main = "main",
   plot = "plot",
   ...,
@@ -16,7 +16,8 @@ ggeotheme(
 }
 \arguments{
 \item{theme}{Name of the theme to use. One of "ghibli_mononoke", "islamic_samarquand",
-"pomological_green", "pomological_red", "nord_blue", "swiss_red", "doc" or "oc_exams"}
+"pomological_green", "pomological_red", "nord_blue", "swiss_red",
+"purple", "doc" or "oc_exams"}
 
 \item{main}{One of \code{main}, \code{main_latex} or \code{main_exa}}
 
