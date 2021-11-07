@@ -42,18 +42,32 @@ ggeosave <- function(filename, ...,
                   ...)
 }
 
-ggeo_save <- function() {
+#' Save function
+#'
+#' @param plot The ggplot2 object to save (should by piped in ;)
+#' @param filename Path for filename (with extension!)
+#' @param width Width. Defaults to keynote width (full = geotools::gtl_options("plot_full_width"))
+#' @param height Height. Defaults to keynote height (full = geotools::gtl_options("plot_full_width"))
+#' @param dpi DPI. Defaults to 72.
+#' @param units Units. Defaults to cm.
+#' @param ... Arguments to pass to ggplot2::ggsave
+#'
+#' @export
+ggeo_save <- function(plot,
+                      filename,
+                      width = geotools::gtl_options("plot_standard_width"),
+                      height = geotools::gtl_options("plot_standard_height"),
+                      dpi = 72,
+                      units = "cm",
+                      ...) {
 
-}
-
-ggeo_save_pdf <- function() {
-
-}
-
-ggeo_save_svg <- function() {
-
-}
-
-ggeo_save_png <- function() {
-
+  ggplot2::ggsave(
+    filename = filename,
+    width = width,
+    height = height,
+    dpi = dpi,
+    units = units,
+    plot = plot,
+    ...
+  )
 }
