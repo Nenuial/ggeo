@@ -7,12 +7,12 @@ ggeodata <- list(
       text = list(
         size = 24,
         face = "plain",
-        family = "Avenir Next"
+        family = "Fira Sans Light"
       ),
       title = list(
         size = 28,
         face = "bold",
-        family = "DINAlternate-Bold"
+        family = "Fira Sans"
       )
     ),
 
@@ -48,18 +48,18 @@ ggeodata <- list(
       title = list(
         size = 72,
         face = "bold",
-        family = "DINCondensed-Bold"
+        family = "Fira Sans"
       ),
       subtitle = list(
         size = 32,
         face = "bold",
-        family = "DINAlternate-Bold"
+        family = "Fira Sans"
       ),
       subtitle_margin = ggplot2::margin(b = .5, unit = "cm"),
       caption = list(
         size = 18,
         face = "italic",
-        family = "Avenir Next"
+        family = "Fira Sans Light"
       ),
       line = list(
         size = .8
