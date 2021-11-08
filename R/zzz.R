@@ -10,6 +10,15 @@ magrittr::`%<>%`
 #' @export
 rlang::`!!`
 
+#' A shortcut function for the system.file to the ggeo package
+#'
+#' @return A path
+#'
+#' @export
+ggeo_file = function(...) {
+  system.file(..., package = 'ggeo', mustWork = TRUE)
+}
+
 .onLoad = function(lib, pkg) {
   # Use showtext ------------------------------------------------------------
   showtext::showtext_auto()
