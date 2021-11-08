@@ -24,10 +24,8 @@ Imports:
     scales,
     geotools,
     lifecycle,
-    geovizr,
     showtext
 Remotes:
-    Nenuial/geovizr,
     Nenuial/geotools
 Depends: 
     R (>= 3.1)

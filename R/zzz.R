@@ -29,7 +29,7 @@ ggeo_file = function(...) {
   needed <- c("Helvetica", "Fira Sans", "Fira Sans Light")
 
   check_registered_fonts <- function(font) {
-    if (!(font %in% registered)) geovizr::gvz_register_fonts()
+    if (!(font %in% registered)) ggeo_register_fonts()
   }
 
   needed |>
