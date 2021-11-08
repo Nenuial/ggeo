@@ -23,7 +23,12 @@ Imports:
     grDevices,
     scales,
     geotools,
-    lifecycle
+    lifecycle,
+    geovizr,
+    showtext
+Remotes:
+    Nenuial/geovizr,
+    Nenuial/geotools
 Depends: 
     R (>= 3.1)
 Roxygen: list(markdown = TRUE)
