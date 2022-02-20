@@ -29,7 +29,10 @@ ggeo_file = function(...) {
   needed <- c("Helvetica", "Fira Sans", "Fira Sans Light")
 
   check_registered_fonts <- function(font) {
-    if (!(font %in% registered)) ggeo_register_fonts()
+    if (!(font %in% registered)) {
+      if (Sys.info()[["sysname"]] == "Darwin") ggeo::ggeo_install_fonts_macos(system_wide = TRUE)
+      ggeo_register_fonts()
+    }
   }
 
   needed |>
