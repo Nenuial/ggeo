@@ -15,6 +15,6 @@ below to see their documentation.
 \describe{
   \item{magrittr}{\code{\link[magrittr:compound]{\%<>\%}}, \code{\link[magrittr:pipe]{\%>\%}}}
 
-  \item{rlang}{\code{\link[rlang:nse-force]{!!}}}
+  \item{rlang}{\code{\link[rlang:injection-operator]{!!}}}
 }}
 

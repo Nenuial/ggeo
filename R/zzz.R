@@ -30,7 +30,7 @@ ggeo_file = function(...) {
 
   check_registered_fonts <- function(font) {
     if (!(font %in% registered)) {
-      if (Sys.info()[["sysname"]] == "Darwin") ggeo::ggeo_install_fonts_macos(system_wide = TRUE)
+      if (Sys.info()[["sysname"]] == "Darwin") ggeo_install_fonts_macos(system_wide = TRUE)
       ggeo_register_fonts()
     }
   }
