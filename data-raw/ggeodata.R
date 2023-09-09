@@ -16,6 +16,19 @@ ggeodata <- list(
       )
     ),
 
+    main_svg = list(
+      text = list(
+        size = 12,
+        face = "plain",
+        family = "Fira Sans Light"
+      ),
+      title = list(
+        size = 16,
+        face = "plain",
+        family = "Fira Sans"
+      )
+    ),
+
     main_exa = list(
       text = list(
         size = 11,
@@ -65,6 +78,29 @@ ggeodata <- list(
         size = .8
       ),
       margin = ggplot2::margin(l = .1, t = 1, b = .5, r = 1, unit = "cm")
+    ),
+
+    plot_svg = list(
+      title = list(
+        size = 28,
+        face = "bold",
+        family = "Fira Sans"
+      ),
+      subtitle = list(
+        size = 20,
+        face = "plain",
+        family = "Fira Sans"
+      ),
+      subtitle_margin = ggplot2::margin(b = .5, unit = "cm"),
+      caption = list(
+        size = 14,
+        face = "italic",
+        family = "Fira Sans Light"
+      ),
+      line = list(
+        size = .8
+      ),
+      margin = ggplot2::margin(l = .1, t = .2, b = .2, r = .1, unit = "cm")
     ),
 
     plot_exa = list(

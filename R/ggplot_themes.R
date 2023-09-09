@@ -23,8 +23,8 @@ ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
 
   theme <- match.arg(theme)
   mode <- match.arg(mode)
-  main <- match.arg(main, choices = c("main", "main_exa", "main_latex"))
-  plot <- match.arg(plot, choices = c("plot", "plot_exa", "plot_latex"))
+  main <- match.arg(main, choices = c("main", "main_exa", "main_latex", "main_svg"))
+  plot <- match.arg(plot, choices = c("plot", "plot_exa", "plot_latex", "plot_svg"))
 
   theme <- (base +
               ggplot2::theme(rect =
