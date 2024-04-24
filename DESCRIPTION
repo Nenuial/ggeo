@@ -24,7 +24,8 @@ Imports:
     scales,
     geotools,
     lifecycle,
-    showtext
+    showtext,
+    fs
 Remotes:
     Nenuial/geotools
 Depends: 
