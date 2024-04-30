@@ -4,30 +4,38 @@ Title: Provide Helpers and Themes for ggplot
 Version: 0.1.0
 Author: Pascal Burkhard
 Maintainer: Pascal Burkhard <pascal.burkhard@gmail.com>
-Description: ggplot helpers and themes
-License: What license is it under?
+Description: This package provides helper functions for ggplot graphs and maps.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/Nenuial/geographer.git
 RoxygenNote: 7.3.1
 Imports: 
-    ggplot2,
-    magrittr,
-    rlang,
-    sysfonts,
-    stringr,
-    paletteer,
-    utils,
-    prismatic,
     colorspace,
-    grDevices,
-    scales,
+    fs,
     geotools,
+    ggplot2,
+    glue,
+    grDevices,
+    highcharter,
     lifecycle,
+    paletteer,
+    prismatic,
+    magrittr,
+    methods,
+    purrr,
+    rlang,
+    scales,
     showtext,
-    fs
+    stringr,
+    sysfonts,
+    utils,
+    wesanderson,
+    preferably
 Remotes:
     Nenuial/geotools
 Depends: 
-    R (>= 3.1)
+    R (>= 4.1)
 Roxygen: list(markdown = TRUE)
+URL: https://ggeo.nenuial.org
+Authors@R: 
+    person("Pascal", "Burkhard", , "pascal.burkhard@gmail.com", role = c("aut", "cre"))

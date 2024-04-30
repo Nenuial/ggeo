@@ -15,5 +15,6 @@ ggeoformat_pyramid_pop(x, ...)
 Absolute
 }
 \description{
-DEPRECATED
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 }
+\keyword{internal}

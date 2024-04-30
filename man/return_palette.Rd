@@ -9,7 +9,8 @@ return_palette(n, center, params)
 \arguments{
 \item{n}{Number of colors}
 
-\item{center}{Where is the center (counted from the left). Use -1 for non diverging palettes.}
+\item{center}{Where is the center (counted from the left).
+Use -1 for non diverging palettes.}
 
 \item{params}{Parameters to pass on to paletteer}
 }
@@ -19,3 +20,4 @@ A vector of colors
 \description{
 Return a color palette with option to center diverging palettes
 }
+\keyword{internal}

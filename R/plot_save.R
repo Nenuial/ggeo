@@ -1,6 +1,6 @@
 #' Save plots to out folder
 #'
-#' Deprecated !
+#' `r lifecycle::badge("deprecated")`
 #'
 #' @inheritParams ggplot2::ggsave
 #' @param filename Name of the output file
@@ -12,6 +12,7 @@
 #' @param device Optional: output device
 #'
 #' @export
+#' @keywords internal
 ggeosave <- function(filename, ...,
                      format = c(NA, "keynote"),
                      width = 63.5,
@@ -20,6 +21,9 @@ ggeosave <- function(filename, ...,
                      units = "cm",
                      extension = "pdf",
                      device = grDevices::cairo_pdf) {
+
+  lifecycle::deprecate_warn("1.0.0", "ggeosave()", "ggeo_save()")
+
   format <- match.arg(format)
 
   switch(format,

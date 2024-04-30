@@ -15,3 +15,11 @@ A ggplot2 object
 \description{
 Copitalize plot title
 }
+\examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+ggplot(aes(x = speed, y = dist), data = cars) +
+  geom_point() +
+  labs(title = "Fast cars !") +
+  ggeo_remove_title()
+\dontshow{\}) # examplesIf}
+}

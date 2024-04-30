@@ -30,13 +30,14 @@ ggeo_label_abs_percent <- function(x) {
 
 #' Format population labels on pyramids
 #'
-#' DEPRECATED
+#' `r lifecycle::badge("deprecated")`
 #'
 #' @param x The label
 #' @param ... For compatibility
 #'
 #' @return Absolute
 #' @export
+#' @keywords internal
 ggeoformat_pyramid_pop <- function(x, ...) {
   scales::number(abs(x), scale = 1e-3)
 }

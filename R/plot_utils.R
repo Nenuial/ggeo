@@ -4,6 +4,12 @@
 #'
 #' @return A ggplot2 object
 #' @export
+#' @examplesIf interactive()
+#' ggplot(aes(x = speed, y = dist), data = cars) +
+#'   geom_point() +
+#'   labs(title = "Fast cars !") +
+#'   ggeo_remove_title()
+#'
 ggeo_capitalize_title <- function(plot) {
   plot$labels$title %>%
     stringr::str_to_upper() %>%
@@ -22,6 +28,12 @@ ggeo_capitalize_title <- function(plot) {
 #'
 #' @return A ggplot2 object
 #' @export
+#' @examplesIf interactive()
+#' ggplot(aes(x = speed, y = dist), data = cars) +
+#'   geom_point() +
+#'   labs(title = "Fast cars !") +
+#'   ggeo_remove_title()
+#'
 ggeo_remove_title <- function(plot) {
   plot$labels$title <- NULL
   plot$patches$annotation$title <- NULL

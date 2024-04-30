@@ -45,6 +45,7 @@ ggeo_install_fonts_linux <- function() {
 #' Register fonts
 #'
 #' @export
+#' @keywords internal
 ggeo_register_fonts <- function() {
   sysfonts::font_add("Fira Sans", regular = "FiraSans-Regular.otf", bold = "FiraSans-Bold.otf", italic = "FiraSans-Italic.otf")
   sysfonts::font_add("Fira Sans Light", regular = "FiraSans-Light.otf", italic = "FiraSans-LightItalic.otf")

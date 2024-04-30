@@ -6,8 +6,20 @@
 \usage{
 ggeo_file(...)
 }
+\arguments{
+\item{...}{
+  Arguments passed on to \code{\link[base:system.file]{base::system.file}}
+  \describe{
+    \item{\code{package}}{a character string with the name of a single package.
+    An error occurs if more than one package name is given.}
+    \item{\code{lib.loc}}{a character vector with path names of \R libraries.
+    See \sQuote{Details} for the meaning of the default value of \code{NULL}.}
+    \item{\code{mustWork}}{logical.  If \code{TRUE}, an error is given if there
+    are no matching files.}
+  }}
+}
 \value{
-A path
+A file path
 }
 \description{
 A shortcut function for the system.file to the ggeo package

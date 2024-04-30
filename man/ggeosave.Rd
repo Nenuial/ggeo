@@ -38,5 +38,6 @@ as specified by \code{device}.}
 \item{device}{Optional: output device}
 }
 \description{
-Deprecated !
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 }
+\keyword{internal}

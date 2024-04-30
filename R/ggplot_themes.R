@@ -1,5 +1,7 @@
-#' ggeo theme
+#' ggeo plot themes
 #'
+#' A function that returns the ggplot theme elements for the chosen
+#' theme.
 #'
 #' @inheritParams ggplot2::theme_minimal
 #' @param theme Name of the theme to use. One of "ghibli_mononoke", "islamic_samarquand",
@@ -9,8 +11,12 @@
 #' @param plot One of `plot`, `plot_latex` or `plot_exa`
 #' @param mode One of `light` or `dark`
 #' @param base A ggplot2 theme
+#' @inheritDotParams ggplot2::theme
 #' @return An object of class [ggplot2::theme()].
 #' @export
+#' @examplesIf interactive()
+#' ggeotheme("ghibli_mononoke")
+#'
 ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
                                 "pomological_green", "pomological_red",
                                 "nord_blue", "swiss_red", "purple",

@@ -1,18 +1,8 @@
-#' @importFrom magrittr %>%
-#' @export
-magrittr::`%>%`
-
-#' @importFrom magrittr %<>%
-#' @export
-magrittr::`%<>%`
-
-#' @importFrom rlang !!
-#' @export
-rlang::`!!`
-
 #' A shortcut function for the system.file to the ggeo package
 #'
-#' @return A path
+#' @inheritDotParams base::system.file
+#'
+#' @return A file path
 #'
 #' @export
 ggeo_file = function(...) {

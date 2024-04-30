@@ -9,7 +9,13 @@ palette_chooser(n, params)
 \arguments{
 \item{n}{Number of colors}
 
-\item{params}{Parameters to pass on to paletteer}
+\item{params}{Parameters to pass on to paletteer
+Must be a list with:
+\itemize{
+\item type: the type of palette, on of \code{cont}, \code{dis} or \code{dyn}
+\item palette: the {paletteer} palette
+\item dir: the palette direction
+}}
 }
 \value{
 A vector of colors
@@ -17,3 +23,4 @@ A vector of colors
 \description{
 Return a paletteer palette depending on
 }
+\keyword{internal}

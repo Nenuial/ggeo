@@ -9,3 +9,4 @@ ggeo_register_fonts()
 \description{
 Register fonts
 }
+\keyword{internal}

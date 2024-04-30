@@ -1,0 +1,48 @@
+url: https://ggeo.nenuial.org
+template:
+  package: preferably
+  bootstrap: 5
+
+home:
+  sidebar:
+    structure: [license, authors, dev]
+
+reference:
+- title: Plot themes
+  description: |
+    Functions to assist with plot themes.
+  contents:
+  - ggeotheme
+  - hc_purple_theme
+  - hc_samarqand_theme
+  - hc_web_theme
+
+- title: ggplot2 helper functions
+  description: |
+    Functions to assist with ggplot2 charts and maps.
+  contents:
+  - ggeo_capitalize_title
+  - ggeo_coord
+  - ggeo_label_abs_percent
+  - ggeo_label_pyramid
+  - ggeo_label_sci_10
+  - ggeo_remove_breaks
+  - ggeo_remove_title
+  - ggeo_save
+
+- title: Color palettes
+  description: |
+    Functions to assist and help with color palettes.
+  contents:
+  - ggeopal_center
+  - ggeopal_chooser
+  - ggeopal_hex_to_hcl
+  - ggeopal_to_gradient
+
+- title: Utilities
+  description: |
+    Functions to assist package use.
+  contents:
+  - ggeo_file
+  - ggeo_install_fonts_linux
+  - ggeo_install_fonts_macos
