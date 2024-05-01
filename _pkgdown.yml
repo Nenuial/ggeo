@@ -1,11 +1,6 @@
 url: https://ggeo.nenuial.org
 template:
-  package: preferably
-  bootstrap: 5
-
-home:
-  sidebar:
-    structure: [license, authors, dev]
+  package: geopkg
 
 reference:
 - title: Plot themes

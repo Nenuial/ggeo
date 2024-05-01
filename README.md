@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/Nenuial/ggeo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nenuial/ggeo/actions/workflows/R-CMD-check.yaml)
-[![geotools status badge](https://nenuial.r-universe.dev/badges/ggeo)](https://nenuial.r-universe.dev/ggeo)
+[![ggeo status badge](https://nenuial.r-universe.dev/badges/ggeo)](https://nenuial.r-universe.dev/ggeo)
 <!-- badges: end -->
 
 The goal of ggeo is to provide support functions to create plots and maps using {[ggplot2](https://ggplot2.tidyverse.org/)}. They are mainly used in my {[geographer](https://github.com/Nenuial/geographer)} package.

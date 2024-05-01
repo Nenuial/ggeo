@@ -2,8 +2,9 @@ Package: ggeo
 Type: Package
 Title: Provide Helpers and Themes for ggplot
 Version: 0.1.0
-Author: Pascal Burkhard
-Maintainer: Pascal Burkhard <pascal.burkhard@gmail.com>
+Authors@R: 
+    person("Pascal", "Burkhard", , "pascal.burkhard@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0001-5504-5084"))
 Description: This package provides helper functions for ggplot graphs and maps.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -37,5 +38,4 @@ Depends:
     R (>= 4.1)
 Roxygen: list(markdown = TRUE)
 URL: https://ggeo.nenuial.org
-Authors@R: 
-    person("Pascal", "Burkhard", , "pascal.burkhard@gmail.com", role = c("aut", "cre"))
+Config/Needs/website: nenuial/geopkg
