@@ -15,3 +15,4 @@ Move fonts to MacOS font folder
 \description{
 Install fonts on MacOS
 }
+\keyword{internal}

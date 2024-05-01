@@ -24,3 +24,4 @@ A file path
 \description{
 A shortcut function for the system.file to the ggeo package
 }
+\keyword{internal}

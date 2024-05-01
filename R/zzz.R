@@ -4,6 +4,7 @@
 #'
 #' @return A file path
 #'
+#' @keywords internal
 #' @export
 ggeo_file = function(...) {
   system.file(..., package = 'ggeo', mustWork = TRUE)

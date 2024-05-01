@@ -1,10 +1,31 @@
-#' Highchart Theme: Purple
-#' Add a purple theme to a highchart
+#' Highcharts themes
 #'
-#' @param hc A highchart object
+#' These functions can be used to modify the theme of
+#' a highcharts plot.
 #'
-#' @return A highchart object
+#' @param hc A highcharts object
+#'
+#' @return A highcharts object
 #' @export
+#' @examples
+#' highcharter::hchart(
+#'   cars, "point",
+#'   highcharter::hcaes(x = speed, y = dist)
+#' ) |>
+#'   hc_purple_theme()
+#'
+#' highcharter::hchart(
+#'   cars, "point",
+#'   highcharter::hcaes(x = speed, y = dist)
+#' ) |>
+#'   hc_samarqand_theme()
+#'
+#' highcharter::hchart(
+#'   cars, "point",
+#'   highcharter::hcaes(x = speed, y = dist)
+#' ) |>
+#'   hc_web_theme()
+#'
 hc_purple_theme <- function(hc) {
   base_colors <- list(
     main_color  = "#e0d9fb",
@@ -86,12 +107,7 @@ hc_purple_theme <- function(hc) {
     highcharter::hc_add_theme(theme)
 }
 
-#' Highchart Theme: Samarqand
-#' Add a samarqand theme to a highchart
-#'
-#' @param hc A highchart object
-#'
-#' @return A highchart object
+#' @rdname hc_purple_theme
 #' @export
 hc_samarqand_theme <- function(hc) {
   base_colors <- list(
@@ -174,12 +190,7 @@ hc_samarqand_theme <- function(hc) {
     highcharter::hc_add_theme(theme)
 }
 
-#' Highchart Theme: Web
-#' Add a web theme to a highchart
-#'
-#' @param hc A highchart object
-#'
-#' @return A highchart object
+#' @rdname hc_purple_theme
 #' @export
 hc_web_theme <- function(hc) {
   base_colors <- list(

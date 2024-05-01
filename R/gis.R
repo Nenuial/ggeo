@@ -6,16 +6,19 @@
 #'
 #' @seealso [geotools::gtl_crs_proj()]
 #'
-#' @param proj A string for the projection code
+#' @inheritParams geotools::gtl_crs_proj
 #' @inheritDotParams ggplot2::coord_sf
 #'
 #' @return A ggplot2 coord object
 #' @export
-#' @examplesIf interactive()
-#' ggeo_coord("eqearth")
+#' @examples
+#' rnaturalearth::ne_countries() |>
+#'   ggplot2::ggplot() +
+#'   ggplot2::geom_sf() +
+#'   ggeo_coord("eqearth")
 #'
-ggeo_coord <- function(proj, ...) {
-  crs <- geotools::gtl_crs_proj(proj)
+ggeo_coord <- function(code, ...) {
+  crs <- geotools::gtl_crs_proj(code)
 
   ggplot2::coord_sf(crs = crs, datum = NA, ...)
 }

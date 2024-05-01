@@ -57,8 +57,8 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ggeo_save</span><span class="op">(</span></span>
 <span>  <span class="va">plot</span>,</span>
 <span>  <span class="va">filename</span>,</span>
-<span>  width <span class="op">=</span> <span class="fu">geotools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/geotools/man/gtl_options.html" class="external-link">gtl_options</a></span><span class="op">(</span><span class="st">"plot_standard_width"</span><span class="op">)</span>,</span>
-<span>  height <span class="op">=</span> <span class="fu">geotools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/geotools/man/gtl_options.html" class="external-link">gtl_options</a></span><span class="op">(</span><span class="st">"plot_standard_height"</span><span class="op">)</span>,</span>
+<span>  width <span class="op">=</span> <span class="fu">geotools</span><span class="fu">::</span><span class="fu"><a href="https://nenuial.github.io/geotools/reference/gtl_options.html" class="external-link">gtl_options</a></span><span class="op">(</span><span class="st">"plot_standard_width"</span><span class="op">)</span>,</span>
+<span>  height <span class="op">=</span> <span class="fu">geotools</span><span class="fu">::</span><span class="fu"><a href="https://nenuial.github.io/geotools/reference/gtl_options.html" class="external-link">gtl_options</a></span><span class="op">(</span><span class="st">"plot_standard_height"</span><span class="op">)</span>,</span>
 <span>  dpi <span class="op">=</span> <span class="fl">72</span>,</span>
 <span>  units <span class="op">=</span> <span class="st">"cm"</span>,</span>
 <span>  <span class="va">...</span></span>
@@ -68,7 +68,7 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>plot</dt>
-<dd><p>The ggplot2 object to save (should by piped in ;)</p></dd>
+<dd><p>The ggplot2 object to save (should be piped in ;)</p></dd>
 
 
 <dt>filename</dt>
@@ -76,26 +76,66 @@
 
 
 <dt>width</dt>
-<dd><p>Width. Defaults to keynote width (full = geotools::gtl_options("plot_full_width"))</p></dd>
+<dd><p>The plot width.
+Defaults to keynote width (<code>geotools::gtl_options("plot_standard_width")</code>).
+For full slide width use <code>geotools::gtl_options("plot_full_width")</code>.</p></dd>
 
 
 <dt>height</dt>
-<dd><p>Height. Defaults to keynote height (full = geotools::gtl_options("plot_full_width"))</p></dd>
+<dd><p>The plot height.
+Defaults to keynote height (<code>geotools::gtl_options("plot_standard_height")</code>).
+For full slide height use <code>geotools::gtl_options("plot_full_height")</code>.</p></dd>
 
 
 <dt>dpi</dt>
-<dd><p>DPI. Defaults to 72.</p></dd>
+<dd><p>The DPI. Default is 72.</p></dd>
 
 
 <dt>units</dt>
-<dd><p>Units. Defaults to cm.</p></dd>
+<dd><p>Units. Default is cm.</p></dd>
 
 
 <dt>...</dt>
-<dd><p>Arguments to pass to ggplot2::ggsave</p></dd>
+<dd><p>Arguments passed on to <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html" class="external-link">ggplot2::ggsave</a></code></p><dl><dt><code>device</code></dt>
+<dd><p>Device to use. Can either be a device function
+(e.g. <a href="https://rdrr.io/r/grDevices/png.html" class="external-link">png</a>), or one of "eps", "ps", "tex" (pictex),
+"pdf", "jpeg", "tiff", "png", "bmp", "svg" or "wmf" (windows only). If
+<code>NULL</code> (default), the device is guessed based on the <code>filename</code> extension.</p></dd>
+
+    <dt><code>scale</code></dt>
+<dd><p>Multiplicative scaling factor.</p></dd>
+
+    <dt><code>limitsize</code></dt>
+<dd><p>When <code>TRUE</code> (the default), <code>ggsave()</code> will not
+save images larger than 50x50 inches, to prevent the common error of
+specifying dimensions in pixels.</p></dd>
+
+    <dt><code>bg</code></dt>
+<dd><p>Background colour. If <code>NULL</code>, uses the <code>plot.background</code> fill value
+from the plot theme.</p></dd>
+
+    <dt><code>create.dir</code></dt>
+<dd><p>Whether to create new directories if a non-existing
+directory is specified in the <code>filename</code> or <code>path</code> (<code>TRUE</code>) or return an
+error (<code>FALSE</code>, default). If <code>FALSE</code> and run in an interactive session,
+a prompt will appear asking to create a new directory when necessary.</p></dd>
+
+  
+</dl></dd>
 
 </dl></div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
+<span class="r-in"><span><span class="va">cars</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">speed</span>, y <span class="op">=</span> <span class="va">dist</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">simple_plot</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">ggeo_save</span><span class="op">(</span><span class="va">simple_plot</span>, <span class="st">"simple_plot.png"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 

@@ -6,6 +6,8 @@
 \alias{ggeo-package}
 \title{ggeo: Provide Helpers and Themes for ggplot}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 This package provides helper functions for ggplot graphs and maps.
 }
 \seealso{

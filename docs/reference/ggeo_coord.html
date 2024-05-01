@@ -53,20 +53,20 @@ map."><meta property="og:image" content="https://ggeo.nenuial.org/logo.png"><!--
     </div>
 
     <div class="ref-description section level2">
-    <p>A function that uses <code><a href="https://rdrr.io/pkg/geotools/man/gtl_crs_proj.html" class="external-link">geotools::gtl_crs_proj()</a></code> to
+    <p>A function that uses <code><a href="https://nenuial.github.io/geotools/reference/gtl_crs_proj.html" class="external-link">geotools::gtl_crs_proj()</a></code> to
 get the CRS configuration and applies it to a ggplot2
 map.</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ggeo_coord</span><span class="op">(</span><span class="va">proj</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ggeo_coord</span><span class="op">(</span><span class="va">code</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>proj</dt>
-<dd><p>A string for the projection code</p></dd>
+    <dl><dt>code</dt>
+<dd><p>A string with the CRS identifier</p></dd>
 
 
 <dt>...</dt>
@@ -181,14 +181,17 @@ legend, the plot title, or the plot margins.</p></dd>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="https://rdrr.io/pkg/geotools/man/gtl_crs_proj.html" class="external-link">geotools::gtl_crs_proj()</a></code></p></div>
+    <div class="dont-index"><p><code><a href="https://nenuial.github.io/geotools/reference/gtl_crs_proj.html" class="external-link">geotools::gtl_crs_proj()</a></code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
-<span class="r-in"><span><span class="fu">ggeo_coord</span><span class="op">(</span><span class="st">"eqearth"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">rnaturalearth</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/rnaturalearth/reference/ne_countries.html" class="external-link">ne_countries</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">ggeo_coord</span><span class="op">(</span><span class="st">"eqearth"</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="ggeo_coord-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

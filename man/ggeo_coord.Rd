@@ -4,10 +4,10 @@
 \alias{ggeo_coord}
 \title{Return sf coord for given CRS code}
 \usage{
-ggeo_coord(proj, ...)
+ggeo_coord(code, ...)
 }
 \arguments{
-\item{proj}{A string for the projection code}
+\item{code}{A string with the CRS identifier}
 
 \item{...}{
   Arguments passed on to \code{\link[ggplot2:ggsf]{ggplot2::coord_sf}}
@@ -102,9 +102,11 @@ get the CRS configuration and applies it to a ggplot2
 map.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-ggeo_coord("eqearth")
-\dontshow{\}) # examplesIf}
+rnaturalearth::ne_countries() |>
+  ggplot2::ggplot() +
+  ggplot2::geom_sf() +
+  ggeo_coord("eqearth")
+
 }
 \seealso{
 \code{\link[geotools:gtl_crs_proj]{geotools::gtl_crs_proj()}}

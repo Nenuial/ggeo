@@ -23,14 +23,14 @@ Imports:
     magrittr,
     methods,
     purrr,
+    preferably,
     rlang,
     scales,
     showtext,
     stringr,
     sysfonts,
     utils,
-    wesanderson,
-    preferably
+    wesanderson
 Remotes:
     Nenuial/geotools
 Depends: 

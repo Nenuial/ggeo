@@ -12,3 +12,4 @@ Move fonts to Linux font folders
 \description{
 Install fonts on Linux
 }
+\keyword{internal}

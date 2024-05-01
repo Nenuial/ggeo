@@ -2,18 +2,43 @@
 % Please edit documentation in R/highcharter_themes.R
 \name{hc_purple_theme}
 \alias{hc_purple_theme}
-\title{Highchart Theme: Purple
-Add a purple theme to a highchart}
+\alias{hc_samarqand_theme}
+\alias{hc_web_theme}
+\title{Highcharts themes}
 \usage{
 hc_purple_theme(hc)
+
+hc_samarqand_theme(hc)
+
+hc_web_theme(hc)
 }
 \arguments{
-\item{hc}{A highchart object}
+\item{hc}{A highcharts object}
 }
 \value{
-A highchart object
+A highcharts object
 }
 \description{
-Highchart Theme: Purple
-Add a purple theme to a highchart
+These functions can be used to modify the theme of
+a highcharts plot.
+}
+\examples{
+highcharter::hchart(
+  cars, "point",
+  highcharter::hcaes(x = speed, y = dist)
+) |>
+  hc_purple_theme()
+
+highcharter::hchart(
+  cars, "point",
+  highcharter::hcaes(x = speed, y = dist)
+) |>
+  hc_samarqand_theme()
+
+highcharter::hchart(
+  cars, "point",
+  highcharter::hcaes(x = speed, y = dist)
+) |>
+  hc_web_theme()
+
 }

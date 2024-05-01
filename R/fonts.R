@@ -3,7 +3,9 @@
 #' @param system_wide Install the fonts for all users?
 #'
 #' @return Move fonts to MacOS font folder
+#' @keywords internal
 #' @export
+#'
 ggeo_install_fonts_macos <- function(system_wide = FALSE) {
   new_font_path <- "~/Library/Fonts/"
   if (system_wide) new_font_path <- "/Library/Fonts/"
@@ -22,6 +24,8 @@ ggeo_install_fonts_macos <- function(system_wide = FALSE) {
 #'
 #' @return Move fonts to Linux font folders
 #' @export
+#' @keywords internal
+#'
 ggeo_install_fonts_linux <- function() {
   fs::dir_ls(path = ggeo_file("fonts/")) |>
     purrr::walk(

@@ -48,15 +48,26 @@ ggeosave <- function(filename, ...,
 
 #' Save function
 #'
-#' @param plot The ggplot2 object to save (should by piped in ;)
+#' @param plot The ggplot2 object to save (should be piped in ;)
 #' @param filename Path for filename (with extension!)
-#' @param width Width. Defaults to keynote width (full = geotools::gtl_options("plot_full_width"))
-#' @param height Height. Defaults to keynote height (full = geotools::gtl_options("plot_full_width"))
-#' @param dpi DPI. Defaults to 72.
-#' @param units Units. Defaults to cm.
-#' @param ... Arguments to pass to ggplot2::ggsave
+#' @param width The plot width.
+#'  Defaults to keynote width (`geotools::gtl_options("plot_standard_width")`).
+#'  For full slide width use `geotools::gtl_options("plot_full_width")`.
+#' @param height The plot height.
+#'  Defaults to keynote height (`geotools::gtl_options("plot_standard_height")`).
+#'  For full slide height use `geotools::gtl_options("plot_full_height")`.
+#' @param dpi The DPI. Default is 72.
+#' @param units Units. Default is cm.
+#' @inheritDotParams ggplot2::ggsave device scale limitsize bg create.dir
 #'
 #' @export
+#' @examplesIf interactive()
+#' cars |>
+#'   ggplot2::ggplot(ggplot2::aes(x = speed, y = dist)) +
+#'   ggplot2::geom_point() -> simple_plot
+#'
+#' ggeo_save(simple_plot, "simple_plot.png")
+#'
 ggeo_save <- function(plot,
                       filename,
                       width = geotools::gtl_options("plot_standard_width"),
@@ -74,4 +85,47 @@ ggeo_save <- function(plot,
     plot = plot,
     ...
   )
+}
+
+
+#' Copitalize plot title
+#'
+#' @param plot A ggplot2 object
+#'
+#' @return A ggplot2 object
+#' @export
+#' @examplesIf interactive()
+#' ggplot(aes(x = speed, y = dist), data = cars) +
+#'   geom_point() +
+#'   labs(title = "Fast cars !") +
+#'   ggeo_remove_title()
+#'
+ggeo_capitalize_title <- function(plot) {
+  plot$labels$title %>%
+    stringr::str_to_upper() %>%
+    stringr::str_replace_all("COLOR:#", "color:#") -> plot$labels$title
+
+  plot$patches$annotation$title %>%
+    stringr::str_to_upper() %>%
+    stringr::str_replace("COLOR:#", "color:#") -> plot$patches$annotation$title
+
+  plot
+}
+
+#' Remove plot title
+#'
+#' @param plot A ggplot2 object
+#'
+#' @return A ggplot2 object
+#' @export
+#' @examplesIf interactive()
+#' ggplot(aes(x = speed, y = dist), data = cars) +
+#'   geom_point() +
+#'   labs(title = "Fast cars !") +
+#'   ggeo_remove_title()
+#'
+ggeo_remove_title <- function(plot) {
+  plot$labels$title <- NULL
+  plot$patches$annotation$title <- NULL
+  plot
 }
