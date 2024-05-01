@@ -4,7 +4,7 @@
 #' @param params Parameters to pass on to paletteer
 #' Must be a list with:
 #' * type: the type of palette, on of `cont`, `dis` or `dyn`
-#' * palette: the {paletteer} palette
+#' * palette: the \{paletteer\} palette
 #' * dir: the palette direction
 #'
 #' @export

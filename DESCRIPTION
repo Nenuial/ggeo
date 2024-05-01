@@ -32,6 +32,8 @@ Imports:
     sysfonts,
     utils,
     wesanderson
+Suggests: 
+    rnaturalearth
 Remotes:
     Nenuial/geotools
 Depends: 

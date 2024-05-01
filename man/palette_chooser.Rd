@@ -13,7 +13,7 @@ palette_chooser(n, params)
 Must be a list with:
 \itemize{
 \item type: the type of palette, on of \code{cont}, \code{dis} or \code{dyn}
-\item palette: the {paletteer} palette
+\item palette: the \{paletteer\} palette
 \item dir: the palette direction
 }}
 }
