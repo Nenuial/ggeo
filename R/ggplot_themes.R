@@ -14,8 +14,11 @@
 #' @inheritDotParams ggplot2::theme
 #' @return An object of class [ggplot2::theme()].
 #' @export
-#' @examplesIf interactive()
-#' ggeotheme("ghibli_mononoke")
+#' @examples
+#' cars |>
+#'   ggplot2::ggplot(ggplot2::aes(x = speed, y = dist)) +
+#'   ggplot2::geom_point() +
+#'   ggeotheme("ghibli_mononoke")
 #'
 ggeotheme <- function(theme = c("ghibli_mononoke", "islamic_samarquand",
                                 "pomological_green", "pomological_red",

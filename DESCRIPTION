@@ -1,11 +1,13 @@
 Package: ggeo
 Type: Package
-Title: Provide Helpers and Themes for ggplot
+Title: Themes and Helpers for ggplot2
 Version: 0.1.0
 Authors@R: 
     person("Pascal", "Burkhard", , "pascal.burkhard@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0001-5504-5084"))
 Description: This package provides helper functions for ggplot graphs and maps.
+URL: https://ggeo.nenuial.org
+BugReports: http://github.com/nenuial/ggeo/issues/
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -39,5 +41,4 @@ Remotes:
 Depends: 
     R (>= 4.1)
 Roxygen: list(markdown = TRUE)
-URL: https://ggeo.nenuial.org
 Config/Needs/website: nenuial/geopkg

@@ -4,7 +4,7 @@
 \name{ggeo-package}
 \alias{ggeo}
 \alias{ggeo-package}
-\title{ggeo: Provide Helpers and Themes for ggplot}
+\title{ggeo: Themes and Helpers for ggplot2}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
@@ -14,6 +14,7 @@ This package provides helper functions for ggplot graphs and maps.
 Useful links:
 \itemize{
   \item \url{https://ggeo.nenuial.org}
+  \item Report bugs at \url{http://github.com/nenuial/ggeo/issues/}
 }
 
 }

@@ -200,7 +200,9 @@ A function that returns the ggplot theme elements for the chosen
 theme.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-ggeotheme("ghibli_mononoke")
-\dontshow{\}) # examplesIf}
+cars |>
+  ggplot2::ggplot(ggplot2::aes(x = speed, y = dist)) +
+  ggplot2::geom_point() +
+  ggeotheme("ghibli_mononoke")
+
 }

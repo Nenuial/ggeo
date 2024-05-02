@@ -6,7 +6,7 @@
 NULL
 
 # Globals
-# utils::globalVariables(c("", "Part1"))
+# utils::globalVariables(c(""))
 
 #' @importFrom magrittr %>%
 #' @export
