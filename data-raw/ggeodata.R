@@ -2,7 +2,6 @@ ggeodata <- list(
   themes = list(
 
     # Theme main elements -----------------------------------------------------
-
     main = list(
       text = list(
         size = 24,
@@ -15,7 +14,6 @@ ggeodata <- list(
         family = "Fira Sans"
       )
     ),
-
     main_svg = list(
       text = list(
         size = 12,
@@ -28,7 +26,6 @@ ggeodata <- list(
         family = "Fira Sans"
       )
     ),
-
     main_exa = list(
       text = list(
         size = 11,
@@ -41,7 +38,6 @@ ggeodata <- list(
         family = "Helvetica"
       )
     ),
-
     main_latex = list(
       text = list(
         size = 11,
@@ -79,7 +75,6 @@ ggeodata <- list(
       ),
       margin = ggplot2::margin(l = .1, t = 1, b = .5, r = 1, unit = "cm")
     ),
-
     plot_svg = list(
       title = list(
         size = 28,
@@ -102,7 +97,6 @@ ggeodata <- list(
       ),
       margin = ggplot2::margin(l = .1, t = .2, b = .2, r = .1, unit = "cm")
     ),
-
     plot_exa = list(
       title = list(
         size = 14,
@@ -125,7 +119,6 @@ ggeodata <- list(
       ),
       margin = ggplot2::margin(l = .1, t = .1, b = .1, r = .5, unit = "cm")
     ),
-
     plot_latex = list(
       title = list(
         size = 11,
@@ -165,7 +158,6 @@ ggeodata <- list(
         grid = "#3b4457"
       )
     ),
-
     ghibli_mononoke = list(
       light = list(
         text = "#762b19",
@@ -180,7 +172,6 @@ ggeodata <- list(
         grid = "#8891aa"
       )
     ),
-
     pomological_green = list(
       light = list(
         text = "#2b323f",
@@ -195,7 +186,6 @@ ggeodata <- list(
         grid = "#818585"
       )
     ),
-
     pomological_red = list(
       light = list(
         text = "#2b323f",
@@ -210,7 +200,6 @@ ggeodata <- list(
         grid = "#818585"
       )
     ),
-
     islamic_samarquand = list(
       light = list(
         text = "#a58c60",
@@ -225,7 +214,6 @@ ggeodata <- list(
         grid = "#b7daec"
       )
     ),
-
     swiss_red = list(
       light = list(
         text = "#3a3e3f",
@@ -240,7 +228,6 @@ ggeodata <- list(
         grid = "#b2b3b3"
       )
     ),
-
     purple = list(
       light = list(
         text = "#303088",
@@ -255,7 +242,6 @@ ggeodata <- list(
         grid = "#faeff1"
       )
     ),
-
     doc = list(
       light = list(
         text = "black",
@@ -270,7 +256,6 @@ ggeodata <- list(
         grid = "#696969"
       )
     ),
-
     oc_exam = list(
       light = list(
         text = "black",
@@ -289,5 +274,6 @@ ggeodata <- list(
 )
 
 usethis::use_data(ggeodata,
-                  internal = TRUE,
-                  overwrite = TRUE)
+  internal = TRUE,
+  overwrite = TRUE
+)

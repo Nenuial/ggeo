@@ -5,9 +5,6 @@
 ## usethis namespace: end
 NULL
 
-# Globals
-# utils::globalVariables(c(""))
-
 #' @importFrom magrittr %>%
 #' @export
 magrittr::`%>%`

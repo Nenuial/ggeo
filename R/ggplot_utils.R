@@ -21,29 +21,30 @@ ggeosave <- function(filename, ...,
                      units = "cm",
                      extension = "pdf",
                      device = grDevices::cairo_pdf) {
-
   lifecycle::deprecate_warn("1.0.0", "ggeosave()", "ggeo_save()")
 
   format <- match.arg(format)
 
   switch(format,
-         keynote = {
-           width <- 63.5
-           height <- 28.57
-           dpi <- 72
-         }
+    keynote = {
+      width <- 63.5
+      height <- 28.57
+      dpi <- 72
+    }
   )
 
-  if(stringr::str_detect(filename, "^/")) {
+  if (stringr::str_detect(filename, "^/")) {
     filepath <- filename
   } else {
     filepath <- glue::glue("out/{filename}.{extension}")
   }
 
-  ggplot2::ggsave(filename = filepath,
-                  width = width, height = height, dpi = dpi, units = units,
-                  bg = "transparent", device = device,
-                  ...)
+  ggplot2::ggsave(
+    filename = filepath,
+    width = width, height = height, dpi = dpi, units = units,
+    bg = "transparent", device = device,
+    ...
+  )
 }
 
 #' Save function
@@ -75,7 +76,6 @@ ggeo_save <- function(plot,
                       dpi = 72,
                       units = "cm",
                       ...) {
-
   ggplot2::ggsave(
     filename = filename,
     width = width,

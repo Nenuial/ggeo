@@ -14,7 +14,7 @@
 palette_chooser <- function(n, params) {
   lifecycle::deprecate_warn("1.0.0", "palette_chooser()", "ggeo_palette_chooser()")
 
-  ggeo_palette_chooser(n, params)
+  ggeopal_chooser(n, params)
 }
 
 #' Return a paletteer palette depending on
@@ -31,17 +31,23 @@ palette_chooser <- function(n, params) {
 #' @return A vector of colors
 ggeopal_chooser <- function(n, params) {
   if (params$type == "cont") {
-    paletteer::paletteer_c(palette   = params$palette,
-                           n         = n,
-                           direction = params$dir)
+    paletteer::paletteer_c(
+      palette = params$palette,
+      n = n,
+      direction = params$dir
+    )
   } else if (params$type == "dis") {
-    paletteer::paletteer_d(palette   = params$palette,
-                           n         = n,
-                           direction = params$dir)
+    paletteer::paletteer_d(
+      palette = params$palette,
+      n = n,
+      direction = params$dir
+    )
   } else if (params$type == "dyn") {
-    paletteer::paletteer_dynamic(palette   = params$palette,
-                                 n         = n,
-                                 direction = params$dir)
+    paletteer::paletteer_dynamic(
+      palette = params$palette,
+      n = n,
+      direction = params$dir
+    )
   } else {
     stop("Palette type is unmatched")
   }
@@ -89,7 +95,6 @@ ggeopal_center <- function(n, center, params) {
   } else if (center > (n / 2)) {
     colors <- palette_chooser((center - 1) * 2 + 1, params)
     utils::head(colors, n)
-
   } else {
     stop("Can't create color palette. Check parameters!")
   }
@@ -121,11 +126,13 @@ ggeopal_hex_to_hcl <- function(hex, n = 4) {
   color_c <- color@coords[2]
   color_h <- color@coords[3]
 
-  colorspace::sequential_hcl(n = n + 1,
-                             h = color_h,
-                             c = c(color_c, color_c, NA),
-                             l = c(color_l, 100),
-                             power = 1.75)[seq_len(n)]
+  colorspace::sequential_hcl(
+    n = n + 1,
+    h = color_h,
+    c = c(color_c, color_c, NA),
+    l = c(color_l, 100),
+    power = 1.75
+  )[seq_len(n)]
 }
 
 #' Create gradient for palette colors

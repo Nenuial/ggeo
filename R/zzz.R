@@ -6,11 +6,11 @@
 #'
 #' @keywords internal
 #' @export
-ggeo_file = function(...) {
-  system.file(..., package = 'ggeo', mustWork = TRUE)
+ggeo_file <- function(...) {
+  system.file(..., package = "ggeo", mustWork = TRUE)
 }
 
-.onLoad = function(lib, pkg) {
+.onLoad <- function(lib, pkg) {
   # Use showtext ------------------------------------------------------------
   showtext::showtext_auto()
 

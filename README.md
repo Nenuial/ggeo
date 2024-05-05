@@ -19,7 +19,7 @@ remotes::install_github("Nenuial/ggeo")
 Or from r-universe:
 
 ``` r
-install.packages("ggeo", repos = c("https://nenuial.r-universe.dev"))
+install.packages('geographer', repos = c('https://nenuial.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ## Documentation
