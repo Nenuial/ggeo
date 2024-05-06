@@ -12,7 +12,7 @@
 #'
 #' @return A vector of colors
 palette_chooser <- function(n, params) {
-  lifecycle::deprecate_warn("1.0.0", "palette_chooser()", "ggeo_palette_chooser()")
+  lifecycle::deprecate_warn("1.0.0", "palette_chooser()", "ggeopal_chooser()")
 
   ggeopal_chooser(n, params)
 }
@@ -80,20 +80,20 @@ return_palette <- function(n, center, params) {
 ggeopal_center <- function(n, center, params) {
   # Non diverging color palette, easy...
   if (center < 0) {
-    ggeo_palette_chooser(n, params)
+    ggeopal_chooser(n, params)
 
     # Diverging parellel color palette, also easy...
   } else if (center == (n / 2)) {
-    ggeo_palette_chooser(n, params)
+    ggeopal_chooser(n, params)
 
     # Diverging right heavy
   } else if (center < (n / 2)) {
-    colors <- ggeo_palette_chooser((n - center) * 2 + 1, params)
+    colors <- ggeopal_chooser((n - center) * 2 + 1, params)
     utils::tail(colors, n)
 
     # Diverging left heavy
   } else if (center > (n / 2)) {
-    colors <- ggeo_palette_chooser((center - 1) * 2 + 1, params)
+    colors <- ggeopal_chooser((center - 1) * 2 + 1, params)
     utils::head(colors, n)
   } else {
     stop("Can't create color palette. Check parameters!")
