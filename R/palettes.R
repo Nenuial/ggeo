@@ -80,20 +80,20 @@ return_palette <- function(n, center, params) {
 ggeopal_center <- function(n, center, params) {
   # Non diverging color palette, easy...
   if (center < 0) {
-    palette_chooser(n, params)
+    ggeo_palette_chooser(n, params)
 
     # Diverging parellel color palette, also easy...
   } else if (center == (n / 2)) {
-    palette_chooser(n, params)
+    ggeo_palette_chooser(n, params)
 
     # Diverging right heavy
   } else if (center < (n / 2)) {
-    colors <- palette_chooser((n - center) * 2 + 1, params)
+    colors <- ggeo_palette_chooser((n - center) * 2 + 1, params)
     utils::tail(colors, n)
 
     # Diverging left heavy
   } else if (center > (n / 2)) {
-    colors <- palette_chooser((center - 1) * 2 + 1, params)
+    colors <- ggeo_palette_chooser((center - 1) * 2 + 1, params)
     utils::head(colors, n)
   } else {
     stop("Can't create color palette. Check parameters!")
