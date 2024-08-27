@@ -71,7 +71,6 @@ ggeotheme <- function(
         color = ggeodata$themes[[theme]][[mode]]$line
       ),
       panel.grid = ggplot2::element_blank(),
-
       plot.background = ggplot2::element_rect(fill = "transparent", color = NA),
       plot.caption = ggplot2::element_text(
         family = ggeodata$themes[[plot]]$caption$family,

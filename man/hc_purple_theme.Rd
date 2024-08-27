@@ -3,12 +3,15 @@
 \name{hc_purple_theme}
 \alias{hc_purple_theme}
 \alias{hc_samarqand_theme}
+\alias{hc_jerusalem_theme}
 \alias{hc_web_theme}
 \title{Highcharts themes}
 \usage{
 hc_purple_theme(hc)
 
 hc_samarqand_theme(hc)
+
+hc_jerusalem_theme(hc)
 
 hc_web_theme(hc)
 }
