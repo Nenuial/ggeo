@@ -12,7 +12,7 @@ URL: https://ggeo.nenuial.org
 BugReports: http://github.com/nenuial/ggeo/issues/
 Depends: 
     R (>= 4.1)
-Imports: 
+Imports:
     colorspace,
     fs,
     geotools,
@@ -24,7 +24,6 @@ Imports:
     magrittr,
     methods,
     paletteer,
-    preferably,
     prismatic,
     purrr,
     rlang,
