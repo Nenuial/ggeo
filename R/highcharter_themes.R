@@ -427,3 +427,75 @@ hc_web_theme <- function(hc) {
   hc |>
     highcharter::hc_add_theme(theme)
 }
+
+#' @rdname hc_purple_theme
+#' @export
+hc_dark_web_theme <- function(hc) {
+  base_colors <- list(
+    main_color  = "#acb5c9",
+    axis_color  = "#b7caed",
+    title_color = "#ffffff"
+  )
+
+  base_text_style <- list(
+    fontFamily = "Fira Sans",
+    color = base_colors$main_color
+  )
+
+  axis_title_style <- list(
+    fontFamily = "Fira Sans",
+    color = base_colors$axis_color
+  )
+
+  theme <- highcharter::hc_theme(
+    colors = wesanderson::wes_palette("GrandBudapest2"),
+    chart = list(
+      backgroundColor = "transparent"
+    ),
+    title = list(
+      style = list(
+        color = base_colors$title_color,
+        fontFamily = "Fira Sans"
+      )
+    ),
+    subtitle = list(
+      style = list(
+        color = base_colors$title_color,
+        fontFamily = "Fira Sans"
+      )
+    ),
+    legend = list(
+      itemStyle = base_text_style,
+      itemHoverStyle = list(
+        color = base_colors$main_color
+      )
+    ),
+    tooltip = list(
+      style = list(
+        fontFamily = "Fira Sans"
+      )
+    ),
+    caption = list(
+      style = base_text_style
+    ),
+    xAxis = list(
+      labels = list(
+        style = base_text_style
+      ),
+      title = list(
+        style = axis_title_style
+      )
+    ),
+    yAxis = list(
+      labels = list(
+        style = base_text_style
+      ),
+      title = list(
+        style = axis_title_style
+      )
+    )
+  )
+
+  hc |>
+    highcharter::hc_add_theme(theme)
+}

@@ -6,6 +6,7 @@
 \alias{hc_pomogreen_theme}
 \alias{hc_jerusalem_theme}
 \alias{hc_web_theme}
+\alias{hc_dark_web_theme}
 \title{Highcharts themes}
 \usage{
 hc_purple_theme(hc)
@@ -17,6 +18,8 @@ hc_pomogreen_theme(hc)
 hc_jerusalem_theme(hc)
 
 hc_web_theme(hc)
+
+hc_dark_web_theme(hc)
 }
 \arguments{
 \item{hc}{A highcharts object}
