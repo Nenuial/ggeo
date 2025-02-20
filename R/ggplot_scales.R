@@ -8,6 +8,10 @@
 #' scientific format using a multiplier and not the *ugly* notation
 #' using the letter *e*.
 #'
+#' [`ggeo_latex_sci_10()`] is used to format numbers with a clean
+#' scientific format using a multiplier and not the *ugly* notation
+#' using the letter *e* but in LaTeX format.
+#'
 #' [`ggeo_label_pyramid()`] is used for population pyramids with
 #' absolute numbers. It formats the absolute number using
 #' [`ggeo_label_sci_10()`].
@@ -22,6 +26,12 @@
 #' @export
 ggeo_label_sci_10 <- function(x) {
   parse(text = gsub("e\\+?", "%.%10^", scales::scientific_format()(x)))
+}
+
+#' @rdname ggeo_label_sci_10
+#' @export
+ggeo_latex_sci_10 <- function(x) {
+  paste0(gsub("e\\+?", "\\\\cdot 10^{", scales::scientific_format()(x)), "}")
 }
 
 #' @rdname ggeo_label_sci_10
