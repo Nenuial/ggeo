@@ -5,6 +5,7 @@
 \alias{hc_samarqand_theme}
 \alias{hc_pomogreen_theme}
 \alias{hc_jerusalem_theme}
+\alias{hc_guonian_theme}
 \alias{hc_web_theme}
 \alias{hc_dark_web_theme}
 \title{Highcharts themes}
@@ -16,6 +17,8 @@ hc_samarqand_theme(hc)
 hc_pomogreen_theme(hc)
 
 hc_jerusalem_theme(hc)
+
+hc_guonian_theme(hc)
 
 hc_web_theme(hc)
 
