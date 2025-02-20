@@ -24,6 +24,7 @@ Imports:
     magrittr,
     methods,
     paletteer,
+    PNWColors,
     prismatic,
     purrr,
     rlang,
