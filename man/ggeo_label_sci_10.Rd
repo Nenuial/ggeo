@@ -2,11 +2,14 @@
 % Please edit documentation in R/ggplot_scales.R
 \name{ggeo_label_sci_10}
 \alias{ggeo_label_sci_10}
+\alias{ggeo_latex_sci_10}
 \alias{ggeo_label_pyramid}
 \alias{ggeo_label_abs_percent}
 \title{Format labels}
 \usage{
 ggeo_label_sci_10(x)
+
+ggeo_latex_sci_10(x)
 
 ggeo_label_pyramid(x)
 
@@ -26,6 +29,10 @@ package and allow formatting labels.
 \code{\link[=ggeo_label_sci_10]{ggeo_label_sci_10()}} is used to format numbers with a clean
 scientific format using a multiplier and not the \emph{ugly} notation
 using the letter \emph{e}.
+
+\code{\link[=ggeo_latex_sci_10]{ggeo_latex_sci_10()}} is used to format numbers with a clean
+scientific format using a multiplier and not the \emph{ugly} notation
+using the letter \emph{e} but in LaTeX format.
 
 \code{\link[=ggeo_label_pyramid]{ggeo_label_pyramid()}} is used for population pyramids with
 absolute numbers. It formats the absolute number using
