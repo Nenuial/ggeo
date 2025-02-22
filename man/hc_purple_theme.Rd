@@ -52,5 +52,4 @@ highcharter::hchart(
   highcharter::hcaes(x = speed, y = dist)
 ) |>
   hc_web_theme()
-
 }
