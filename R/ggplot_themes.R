@@ -21,17 +21,18 @@
 #'   ggeotheme("ghibli_mononoke")
 #'
 ggeotheme <- function(
-    theme = c(
-      "ghibli_mononoke", "islamic_samarquand",
-      "pomological_green", "pomological_red",
-      "nord_blue", "swiss_red", "purple",
-      "doc", "oc_exams"
-    ),
-    main = "main",
-    plot = "plot",
-    ...,
-    mode = c("light", "dark"),
-    base = ggplot2::theme_bw()) {
+  theme = c(
+    "ghibli_mononoke", "islamic_samarquand",
+    "pomological_green", "pomological_red",
+    "nord_blue", "swiss_red", "purple",
+    "doc", "oc_exams"
+  ),
+  main = "main",
+  plot = "plot",
+  ...,
+  mode = c("light", "dark"),
+  base = ggplot2::theme_bw()
+) {
   theme <- match.arg(theme)
   mode <- match.arg(mode)
   main <- match.arg(main, choices = c("main", "main_exa", "main_latex", "main_svg"))
@@ -96,5 +97,5 @@ ggeotheme <- function(
     ) + ggplot2::theme(...)
   )
 
-  return(theme)
+  theme
 }
