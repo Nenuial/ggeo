@@ -39,6 +39,6 @@ absolute numbers. It formats the absolute number using
 \code{\link[=ggeo_label_sci_10]{ggeo_label_sci_10()}}.
 
 \code{\link[=ggeo_label_abs_percent]{ggeo_label_abs_percent()}} is also used for population pyramids
-but with relative numbers (percents). It uses \code{\link[scales:percent_format]{scales::percent()}}
+but with relative numbers (percents). It uses \code{\link[scales:percent]{scales::percent()}}
 and absolute numbers.
 }

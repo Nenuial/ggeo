@@ -1,6 +1,5 @@
 ggeodata <- list(
   themes = list(
-
     # Theme main elements -----------------------------------------------------
     main = list(
       text = list(

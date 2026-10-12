@@ -101,12 +101,12 @@ ggeo_save <- function(plot,
 #'   ggeo_remove_title()
 #'
 ggeo_capitalize_title <- function(plot) {
-  plot$labels$title %>%
-    stringr::str_to_upper() %>%
+  plot$labels$title |>
+    stringr::str_to_upper() |>
     stringr::str_replace_all("COLOR:#", "color:#") -> plot$labels$title
 
-  plot$patches$annotation$title %>%
-    stringr::str_to_upper() %>%
+  plot$patches$annotation$title |>
+    stringr::str_to_upper() |>
     stringr::str_replace("COLOR:#", "color:#") -> plot$patches$annotation$title
 
   plot
