@@ -10,7 +10,7 @@ ggeo_coord(code, ...)
 \item{code}{A string with the CRS identifier}
 
 \item{...}{
-  Arguments passed on to \code{\link[ggplot2:ggsf]{ggplot2::coord_sf}}
+  Arguments passed on to \code{\link[ggplot2:coord_sf]{ggplot2::coord_sf}}
   \describe{
     \item{\code{xlim,ylim}}{Limits for the x and y axes. These limits are specified
 in the units of the default CRS. By default, this means projected coordinates
@@ -25,7 +25,11 @@ is strongly discouraged, as it can result in data points being dropped from the 
 though they would be visible in the final plot region.}
     \item{\code{expand}}{If \code{TRUE}, the default, adds a small expansion factor to
 the limits to ensure that data and axes don't overlap. If \code{FALSE},
-limits are taken exactly from the data or \code{xlim}/\code{ylim}.}
+limits are taken exactly from the data or \code{xlim}/\code{ylim}.
+Giving a logical vector will separately control the expansion for the four
+directions (top, left, bottom and right). The \code{expand} argument will be
+recycled to length 4 if necessary. Alternatively, can be a named logical
+vector to control a single direction, e.g. \code{expand = c(bottom = FALSE)}.}
     \item{\code{crs}}{The coordinate reference system (CRS) into which all data should
 be projected before plotting. If not specified, will use the CRS defined
 in the first sf layer of the plot.}
@@ -91,6 +95,98 @@ drawing of data points anywhere on the plot, including in the plot margins. If
 limits are set via \code{xlim} and \code{ylim} and some data points fall outside those
 limits, then those data points may show up in places such as the axes, the
 legend, the plot title, or the plot margins.}
+    \item{\code{reverse}}{A string giving which directions to reverse. \code{"none"}
+(default) keeps directions as is. \code{"x"} and \code{"y"} can be used to reverse
+their respective directions. \code{"xy"} can be used to reverse both
+directions.}
+    \item{\code{mapping}}{Set of aesthetic mappings created by \code{\link[ggplot2:aes]{aes()}}. If specified and
+\code{inherit.aes = TRUE} (the default), it is combined with the default mapping
+at the top level of the plot. You must supply \code{mapping} if there is no plot
+mapping.}
+    \item{\code{data}}{The data to be displayed in this layer. There are three
+options:
+
+If \code{NULL}, the default, the data is inherited from the plot
+data as specified in the call to \code{\link[ggplot2:ggplot]{ggplot()}}.
+
+A \code{data.frame}, or other object, will override the plot
+data. All objects will be fortified to produce a data frame. See
+\code{\link[ggplot2:fortify]{fortify()}} for which variables will be created.
+
+A \code{function} will be called with a single argument,
+the plot data. The return value must be a \code{data.frame}, and
+will be used as the layer data. A \code{function} can be created
+from a \code{formula} (e.g. \code{~ head(.x, 10)}).}
+    \item{\code{stat}}{The statistical transformation to use on the data for this layer.
+When using a \verb{geom_*()} function to construct a layer, the \code{stat}
+argument can be used to override the default coupling between geoms and
+stats. The \code{stat} argument accepts the following:
+\itemize{
+\item A \code{Stat} ggproto subclass, for example \code{StatCount}.
+\item A string naming the stat. To give the stat as a string, strip the
+function name of the \code{stat_} prefix. For example, to use \code{stat_count()},
+give the stat as \code{"count"}.
+\item For more information and other ways to specify the stat, see the
+\link[ggplot2:layer_stats]{layer stat} documentation.
+}}
+    \item{\code{position}}{A position adjustment to use on the data for this layer. This
+can be used in various ways, including to prevent overplotting and
+improving the display. The \code{position} argument accepts the following:
+\itemize{
+\item The result of calling a position function, such as \code{position_jitter()}.
+This method allows for passing extra arguments to the position.
+\item A string naming the position adjustment. To give the position as a
+string, strip the function name of the \code{position_} prefix. For example,
+to use \code{position_jitter()}, give the position as \code{"jitter"}.
+\item For more information and other ways to specify the position, see the
+\link[ggplot2:layer_positions]{layer position} documentation.
+}}
+    \item{\code{na.rm}}{If \code{FALSE}, the default, missing values are removed with
+a warning. If \code{TRUE}, missing values are silently removed.}
+    \item{\code{show.legend}}{logical. Should this layer be included in the legends?
+\code{NA}, the default, includes if any aesthetics are mapped.
+\code{FALSE} never includes, and \code{TRUE} always includes.
+
+You can also set this to one of "polygon", "line", and "point" to
+override the default legend.}
+    \item{\code{inherit.aes}}{If \code{FALSE}, overrides the default aesthetics,
+rather than combining with them. This is most useful for helper functions
+that define both data and aesthetics and shouldn't inherit behaviour from
+the default plot specification, e.g. \code{\link[ggplot2:annotation_borders]{annotation_borders()}}.}
+    \item{\code{parse}}{If \code{TRUE}, the labels will be parsed into expressions and
+displayed as described in \code{?plotmath}.}
+    \item{\code{label.padding}}{Amount of padding around label. Defaults to 0.25 lines.}
+    \item{\code{label.r}}{Radius of rounded corners. Defaults to 0.15 lines.}
+    \item{\code{label.size}}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}} Replaced by the
+\code{linewidth} aesthetic. Size of label border, in mm.}
+    \item{\code{border.colour,border.color}}{Colour of label border. When \code{NULL}
+(default), the \code{colour} aesthetic determines the colour of the label border.
+\code{border.color} is an alias for \code{border.colour}.}
+    \item{\code{text.colour,text.color}}{Colour of the text. When \code{NULL} (default), the
+\code{colour} aesthetic determines the colour of the text. \code{text.color} is an
+alias for \code{text.colour}.}
+    \item{\code{fun.geometry}}{A function that takes a \code{sfc} object and returns a \code{sfc_POINT} with the
+same length as the input. If \code{NULL}, \code{function(x) sf::st_point_on_surface(sf::st_zm(x))}
+will be used. Note that the function may warn about the incorrectness of
+the result if the data is not projected, but you can ignore this except
+when you really care about the exact locations.}
+    \item{\code{check_overlap}}{If \code{TRUE}, text that overlaps previous text in the
+same layer will not be plotted. \code{check_overlap} happens at draw time and in
+the order of the data. Therefore data should be arranged by the label
+column before calling \code{geom_text()}. Note that this argument is not
+supported by \code{geom_label()}.}
+    \item{\code{geom}}{The geometric object to use to display the data for this layer.
+When using a \verb{stat_*()} function to construct a layer, the \code{geom} argument
+can be used to override the default coupling between stats and geoms. The
+\code{geom} argument accepts the following:
+\itemize{
+\item A \code{Geom} ggproto subclass, for example \code{GeomPoint}.
+\item A string naming the geom. To give the geom as a string, strip the
+function name of the \code{geom_} prefix. For example, to use \code{geom_point()},
+give the geom as \code{"point"}.
+\item For more information and other ways to specify the geom, see the
+\link[ggplot2:layer_geoms]{layer geom} documentation.
+}}
   }}
 }
 \value{

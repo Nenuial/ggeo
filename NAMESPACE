@@ -34,6 +34,8 @@ export(hc_web_theme)
 export(palette_chooser)
 export(return_palette)
 importClassesFrom(colorspace,polarLUV)
-importFrom(magrittr,"%<>%")
-importFrom(magrittr,"%>%")
+importFrom(magrittr,
+  "%<>%",
+  "%>%"
+)
 importFrom(rlang,"!!")

@@ -54,7 +54,7 @@ a prompt will appear asking to create a new directory when necessary.}
 Save function
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 cars |>
   ggplot2::ggplot(ggplot2::aes(x = speed, y = dist)) +
   ggplot2::geom_point() -> simple_plot
