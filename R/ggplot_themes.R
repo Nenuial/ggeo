@@ -79,7 +79,7 @@ ggeotheme <- function(
         face = ggeodata$themes[[plot]]$caption$face,
         color = ggeodata$themes[[theme]][[mode]]$text
       ),
-      plot.margin = ggeodata$themes[[plot]]$margin,
+      plot.margin = ggeo_margin(ggeodata$themes[[plot]]$margin),
       plot.title = ggplot2::element_text(
         family = ggeodata$themes[[plot]]$title$family,
         size = ggeodata$themes[[plot]]$title$size,
@@ -92,10 +92,17 @@ ggeotheme <- function(
         size = ggeodata$themes[[plot]]$subtitle$size,
         face = ggeodata$themes[[plot]]$subtitle$face,
         color = ggeodata$themes[[theme]][[mode]]$title,
-        margin = ggeodata$themes[[plot]]$subtitle_margin
+        margin = ggeo_margin(ggeodata$themes[[plot]]$subtitle_margin)
       )
     ) + ggplot2::theme(...)
   )
 
   theme
+}
+
+# The stored margins were saved with an older ggplot2: rebuilt with margin()
+# from the same values and unit, so that ggplot2 >= 4 accepts them
+ggeo_margin <- function(margin) {
+  values <- as.numeric(margin)
+  ggplot2::margin(values[1], values[2], values[3], values[4], unit = grid::unitType(margin)[1])
 }
